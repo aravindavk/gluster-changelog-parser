@@ -32,7 +32,7 @@ void print_entry_create_mknod_mkdir(T)(string ver, ref T data)
 void print_entry_rename(T)(string ver, ref T data)
 {
     // OLD NAME: PGFID/BASENAME
-    writef("%s", data.front());
+    writef("%s ", data.front());
     data.popFront();
 
     // NEW NAME: PGFID/BASENAME
@@ -112,7 +112,7 @@ int main(string[] args)
             data.popFront();
 
             // E <GFID> <FOP_TYPE>
-            writef("E %s %7s ", gfid, entry_type);
+            writef("E %s %-8s ", gfid, entry_type);
 
             switch (entry_type)
             {
