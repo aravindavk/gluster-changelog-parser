@@ -10,5 +10,5 @@ release:
 	./release.sh
 
 clean:
-	rm -f gluster-log-colorize
+	rm -f gluster-changelog-parser
 	rm -f *.tar.xz
